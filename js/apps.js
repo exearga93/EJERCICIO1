@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   botonComenzar.addEventListener("click", function () {
     numeroMagico = Math.floor(Math.random() * 100) + 1; // Genera un número aleatorio entre 1 y 100
+    console.log('Número mágico generado:', numeroMagico)
     alert("¡El juego ha comenzado! Adivina el número mágico entre 1 y 100.");
     inputNumero.value = ""; // Resetea el campo de entrada
   });
@@ -19,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (numeroUsuario === numeroMagico) {
-      alert("¡Felicidades! Adivinaste el número mágico.");
+      alert("¡Felicitaciones! Adivinaste el número!");
     } else if (numeroUsuario < numeroMagico) {
       alert(
-        "El número ingresado es menor que el número mágico. Intenta de nuevo."
+        "El número que ingresaste es menor al número mágico. Intenta de nuevo."
       );
     } else {
       alert(
-        "El número ingresado es mayor que el número mágico. Intenta de nuevo."
+        "El número que ingresaste es mayor al número mágico. Intenta de nuevo."
       );
     }
   });
